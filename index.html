@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Noble Marketing – Strategische Markenführung und digitales Wachstum für ambitionierte Unternehmen.">
-<title>Noble Marketing — Strategie. Marke. Wachstum.</title>
+<meta name="description" content="Noble Marketing – Professionelle Webseiten für ambitionierte Unternehmen. Design, Entwicklung und Launch aus einer Hand.">
+<title>Noble Marketing — Webseiten, die verkaufen.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
   :root{
     --ink:#0a0a0c;
     --ink2:#111114;
-    --ink3:#17171c;
     --line:rgba(255,255,255,0.09);
     --line2:rgba(255,255,255,0.14);
     --paper:#f6f4ef;
@@ -33,46 +32,37 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
   ::selection{background:var(--gold);color:var(--ink)}
 
-  /* ── GRAIN + MESH BACKGROUND ── */
+  /* ── MESH BACKGROUND ── */
   .mesh{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
-  .mesh i{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.5;mix-blend-mode:screen}
-  .mesh .m1{width:520px;height:520px;background:radial-gradient(circle,rgba(201,168,106,0.35),transparent 70%);
-    top:-120px;left:-80px;animation:drift1 22s ease-in-out infinite}
-  .mesh .m2{width:460px;height:460px;background:radial-gradient(circle,rgba(120,90,200,0.20),transparent 70%);
-    top:30%;right:-120px;animation:drift2 28s ease-in-out infinite}
-  .mesh .m3{width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,106,0.18),transparent 70%);
-    bottom:-100px;left:30%;animation:drift3 25s ease-in-out infinite}
-  @keyframes drift1{50%{transform:translate(80px,60px) scale(1.15)}}
-  @keyframes drift2{50%{transform:translate(-70px,40px) scale(1.1)}}
-  @keyframes drift3{50%{transform:translate(50px,-50px) scale(1.2)}}
-  .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.045;
+  .mesh i{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.45;mix-blend-mode:screen}
+  .mesh .m1{width:520px;height:520px;background:radial-gradient(circle,rgba(201,168,106,0.32),transparent 70%);
+    top:-140px;left:-100px;animation:drift1 24s ease-in-out infinite}
+  .mesh .m2{width:440px;height:440px;background:radial-gradient(circle,rgba(100,80,200,0.18),transparent 70%);
+    top:35%;right:-120px;animation:drift2 30s ease-in-out infinite}
+  .mesh .m3{width:380px;height:380px;background:radial-gradient(circle,rgba(201,168,106,0.16),transparent 70%);
+    bottom:-80px;left:35%;animation:drift3 26s ease-in-out infinite}
+  @keyframes drift1{50%{transform:translate(70px,50px) scale(1.12)}}
+  @keyframes drift2{50%{transform:translate(-60px,35px) scale(1.08)}}
+  @keyframes drift3{50%{transform:translate(45px,-45px) scale(1.18)}}
+  .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.04;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
   /* ── SCROLL PROGRESS ── */
   .progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:200;
-    background:linear-gradient(90deg,var(--gold),var(--gold-2));box-shadow:0 0 12px var(--gold)}
-
-  /* ── CUSTOM CURSOR ── */
-  .cur,.cur-dot{position:fixed;top:0;left:0;z-index:300;pointer-events:none;border-radius:50%;
-    transform:translate(-50%,-50%);will-change:transform}
-  .cur{width:34px;height:34px;border:1px solid rgba(201,168,106,0.6);
-    transition:width .3s var(--ease),height .3s var(--ease),background .3s,border-color .3s}
-  .cur-dot{width:5px;height:5px;background:var(--gold)}
-  .cur.grow{width:62px;height:62px;background:var(--gold-soft);border-color:transparent}
-  @media(hover:none),(max-width:880px){.cur,.cur-dot{display:none}}
+    background:linear-gradient(90deg,var(--gold),var(--gold-2));box-shadow:0 0 10px var(--gold)}
 
   /* ── NAV ── */
   header{position:fixed;top:0;left:0;right:0;z-index:100;
     transition:background .5s var(--ease),border-color .5s,padding .5s var(--ease);
     border-bottom:1px solid transparent;padding:24px 0}
-  header.scrolled{background:rgba(10,10,12,0.7);backdrop-filter:blur(18px);
+  header.scrolled{background:rgba(10,10,12,0.72);backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);border-color:var(--line);padding:13px 0}
   .nav{display:flex;align-items:center;justify-content:space-between}
   .logo{font-family:var(--serif);font-size:1.5rem;font-weight:600;letter-spacing:-0.01em;
     display:flex;align-items:center;gap:10px}
   .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);
     box-shadow:0 0 14px var(--gold);animation:pulse 3s ease-in-out infinite}
-  @keyframes pulse{50%{box-shadow:0 0 22px var(--gold),0 0 4px var(--gold)}}
+  @keyframes pulse{50%{box-shadow:0 0 22px var(--gold)}}
   .nav-links{display:flex;gap:38px;align-items:center}
   .nav-links a:not(.btn){font-size:0.92rem;color:var(--paper-dim);font-weight:500;position:relative}
   .nav-links a:not(.btn)::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:1px;
@@ -80,18 +70,18 @@
   .nav-links a:not(.btn):hover{color:var(--paper)}
   .nav-links a:not(.btn):hover::after{width:100%}
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:0.92rem;
-    padding:13px 26px;border-radius:100px;transition:transform .4s var(--ease),background .35s,color .35s,box-shadow .4s;
-    cursor:pointer;border:none;position:relative;overflow:hidden}
+    padding:13px 26px;border-radius:100px;cursor:pointer;border:none;position:relative;
+    transition:transform .4s var(--ease),box-shadow .4s,background .3s,color .3s}
   .btn span{position:relative;z-index:1}
   .btn-gold{background:var(--gold);color:var(--ink)}
-  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 30px -8px rgba(201,168,106,0.6)}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 28px -8px rgba(201,168,106,0.55)}
   .btn-ghost{background:transparent;color:var(--paper);border:1px solid var(--line2)}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
   .nav-toggle{display:none;background:none;border:none;color:var(--paper);font-size:1.5rem;cursor:pointer}
 
   /* ── HERO ── */
   .hero{position:relative;padding:210px 0 130px}
-  .hero-inner{position:relative;max-width:900px}
+  .hero-inner{position:relative;max-width:920px}
   .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:0.78rem;letter-spacing:0.2em;
     text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:30px}
   .eyebrow::before{content:'';width:34px;height:1px;background:var(--gold);
@@ -100,13 +90,12 @@
   h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.7rem,6.6vw,5.4rem);
     line-height:1.03;letter-spacing:-0.025em;margin-bottom:32px}
   h1 em{font-style:italic;color:var(--gold)}
-  /* word reveal */
   .reveal-line{display:block;overflow:hidden}
   .reveal-line>span{display:inline-block;transform:translateY(110%);
     animation:word-up 1s var(--ease) both}
   @keyframes word-up{to{transform:translateY(0)}}
-  .hero p{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--paper-dim);max-width:580px;margin-bottom:44px;
-    opacity:0;animation:fade-up 1s var(--ease) .8s both}
+  .hero p{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--paper-dim);max-width:580px;
+    margin-bottom:44px;opacity:0;animation:fade-up 1s var(--ease) .8s both}
   .hero-cta{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fade-up 1s var(--ease) 1s both}
   @keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 
@@ -116,12 +105,12 @@
     mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
   .marquee{display:flex;gap:64px;width:max-content;animation:scroll-x 26s linear infinite}
   .marquee:hover{animation-play-state:paused}
-  .marquee span{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--paper);
+  .marquee span{font-family:var(--serif);font-size:1.45rem;font-weight:500;color:var(--paper);
     white-space:nowrap;display:flex;align-items:center;gap:64px;opacity:0.85}
-  .marquee span::after{content:'✦';color:var(--gold);font-size:0.9rem}
+  .marquee span::after{content:'✦';color:var(--gold);font-size:0.85rem}
   @keyframes scroll-x{to{transform:translateX(-50%)}}
 
-  /* ── SECTION SHELL ── */
+  /* ── SECTION ── */
   section{padding:128px 0;position:relative}
   .sec-head{max-width:700px;margin-bottom:66px}
   .sec-head .eyebrow{margin-bottom:22px}
@@ -129,38 +118,38 @@
     line-height:1.08;letter-spacing:-0.025em;margin-bottom:18px}
   .sec-head p{color:var(--paper-dim);font-size:1.08rem}
 
-  /* ── SERVICES / CARDS ── */
+  /* ── CARDS ── */
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .card{position:relative;background:var(--ink2);border:1px solid var(--line);border-radius:22px;
     padding:40px 34px;transition:transform .5s var(--ease),border-color .5s;overflow:hidden}
   .card::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .5s;
-    background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(201,168,106,0.12),transparent 65%)}
-  .card:hover{transform:translateY(-8px);border-color:rgba(201,168,106,0.35)}
+    background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(201,168,106,0.11),transparent 65%)}
+  .card:hover{transform:translateY(-7px);border-color:rgba(201,168,106,0.32)}
   .card:hover::before{opacity:1}
   .card>*{position:relative}
   .card .num{font-family:var(--serif);font-size:0.9rem;color:var(--gold);margin-bottom:26px;display:block}
-  .card h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin-bottom:12px;letter-spacing:-0.01em}
+  .card h3{font-family:var(--serif);font-weight:500;font-size:1.46rem;margin-bottom:12px;letter-spacing:-0.01em}
   .card p{color:var(--paper-dim);font-size:0.97rem}
 
-  /* ── PRINCIPLES BAND ── */
-  .stats{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  /* ── DARK BAND ── */
+  .dark-band{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
   /* ── PROCESS ── */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
   .step{position:relative;padding-top:28px;border-top:1px solid var(--line)}
-  .step .s-num{position:absolute;top:-1px;left:0;width:0;height:2px;background:var(--gold);
+  .step .s-line{position:absolute;top:-1px;left:0;width:0;height:2px;background:var(--gold);
     transition:width 1s var(--ease)}
-  .step.in .s-num{width:48px}
-  .step h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;margin:18px 0 10px}
-  .step .s-idx{font-size:0.82rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .step.in .s-line{width:48px}
+  .step h3{font-family:var(--serif);font-weight:500;font-size:1.32rem;margin:18px 0 10px}
+  .step .s-idx{font-size:0.8rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .step p{color:var(--paper-dim);font-size:0.97rem}
 
   /* ── QUOTE ── */
   .quote{text-align:center;max-width:900px;margin:0 auto}
-  .quote blockquote{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3.5vw,2.7rem);
+  .quote blockquote{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3.5vw,2.65rem);
     line-height:1.32;letter-spacing:-0.01em;margin-bottom:34px}
   .quote blockquote em{color:var(--gold);font-style:italic}
-  .quote .author{font-weight:600}
+  .quote .author{font-weight:600;margin-bottom:4px}
   .quote .role{color:var(--paper-dim);font-size:0.92rem}
 
   /* ── CTA ── */
@@ -171,7 +160,7 @@
   .cta-band>*{position:relative}
   .cta-band h2{margin-bottom:18px}
   .cta-band p{color:var(--paper-dim);max-width:480px;margin:0 auto 36px;font-size:1.08rem}
-  .cta-band .hero-cta{justify-content:center;animation:none;opacity:1}
+  .cta-band .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
   /* ── FOOTER ── */
   footer{padding:76px 0 40px;border-top:1px solid var(--line)}
@@ -182,23 +171,23 @@
   .foot-col h4{font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;
     color:var(--paper-dim);margin-bottom:18px;font-weight:600}
   .foot-col a{display:block;margin-bottom:12px;font-size:0.95rem;color:var(--paper);
-    opacity:0.82;transition:opacity .3s,color .3s,transform .3s var(--ease)}
+    opacity:0.82;transition:color .3s,opacity .3s,transform .3s var(--ease)}
   .foot-col a:hover{color:var(--gold);opacity:1;transform:translateX(4px)}
   .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     padding-top:28px;border-top:1px solid var(--line);color:var(--paper-dim);font-size:0.86rem}
 
   /* ── REVEAL ── */
-  .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
   .reveal.in{opacity:1;transform:none}
 
   /* ── RESPONSIVE ── */
   @media(max-width:880px){
     .grid,.steps{grid-template-columns:1fr;gap:20px}
-    .nav-links{position:fixed;inset:0;background:rgba(10,10,12,0.97);backdrop-filter:blur(20px);
+    .nav-links{position:fixed;inset:0;background:rgba(10,10,12,0.96);backdrop-filter:blur(20px);
       flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);
       transition:transform .5s var(--ease);z-index:90}
     .nav-links.open{transform:none}
-    .nav-links a:not(.btn){font-size:1.4rem;color:var(--paper)}
+    .nav-links a:not(.btn){font-size:1.4rem}
     .nav-toggle{display:block;z-index:95}
     .cta-band{padding:56px 24px}
     section{padding:92px 0}
@@ -214,17 +203,15 @@
 <div class="mesh"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
 <div class="grain"></div>
 <div class="progress" id="progress"></div>
-<div class="cur" id="cur"></div>
-<div class="cur-dot" id="curDot"></div>
 
 <header id="header">
   <div class="wrap nav">
-    <a href="#" class="logo" data-cur><span class="dot"></span>Noble</a>
+    <a href="#" class="logo"><span class="dot"></span>Noble</a>
     <nav class="nav-links" id="navLinks">
       <a href="#leistungen">Leistungen</a>
-      <a href="#ansatz">Ansatz</a>
       <a href="#prozess">Prozess</a>
-      <a href="#kontakt" class="btn btn-gold" data-cur><span>Gespräch buchen</span></a>
+      <a href="#preise">Preise</a>
+      <a href="#kontakt" class="btn btn-gold"><span>Projekt starten</span></a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menü">☰</button>
   </div>
@@ -233,119 +220,150 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-inner">
-    <span class="eyebrow">Strategie · Marke · Wachstum</span>
+    <span class="eyebrow">Webseiten · Design · Entwicklung</span>
     <h1>
-      <span class="reveal-line"><span style="animation-delay:.2s">Marketing, das</span></span>
-      <span class="reveal-line"><span style="animation-delay:.34s"><em>Substanz</em> hat —</span></span>
-      <span class="reveal-line"><span style="animation-delay:.48s">nicht nur Lärm.</span></span>
+      <span class="reveal-line"><span style="animation-delay:.18s">Webseiten, die</span></span>
+      <span class="reveal-line"><span style="animation-delay:.32s"><em>Kunden gewinnen</em> —</span></span>
+      <span class="reveal-line"><span style="animation-delay:.46s">nicht nur gut aussehen.</span></span>
     </h1>
-    <p>Wir entwickeln Markenstrategien und Kampagnen für Unternehmen, die nachhaltig wachsen wollen. Datengetrieben, gestalterisch kompromisslos, messbar im Ergebnis.</p>
+    <p>Wir bauen professionelle Webseiten für Unternehmen, die online ernst genommen werden wollen. Von der ersten Idee bis zum Launch — alles aus einer Hand.</p>
     <div class="hero-cta">
-      <a href="#kontakt" class="btn btn-gold" data-cur><span>Projekt starten →</span></a>
-      <a href="#leistungen" class="btn btn-ghost" data-cur><span>Leistungen ansehen</span></a>
+      <a href="#kontakt" class="btn btn-gold"><span>Kostenloses Erstgespräch →</span></a>
+      <a href="#leistungen" class="btn btn-ghost"><span>Leistungen ansehen</span></a>
     </div>
   </div>
 </section>
 
 <!-- MARQUEE -->
 <div class="trust">
-  <div class="marquee" id="marquee">
-    <span>Strategie</span><span>Gestaltung</span><span>Performance</span><span>Transparenz</span>
-    <span>Strategie</span><span>Gestaltung</span><span>Performance</span><span>Transparenz</span>
+  <div class="marquee">
+    <span>Design</span><span>Entwicklung</span><span>SEO</span><span>Schnell</span><span>Mobil-optimiert</span><span>Launch</span>
+    <span>Design</span><span>Entwicklung</span><span>SEO</span><span>Schnell</span><span>Mobil-optimiert</span><span>Launch</span>
   </div>
 </div>
 
-<!-- SERVICES -->
+<!-- LEISTUNGEN -->
 <section id="leistungen">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Leistungen</span>
-      <h2>Alles aus einer Hand — strategisch verzahnt.</h2>
-      <p>Keine isolierten Maßnahmen. Wir denken Marke, Performance und Inhalt als ein zusammenhängendes System.</p>
+      <h2>Alles, was Ihre Webseite braucht.</h2>
+      <p>Wir kümmern uns um Design, Technik und Inhalt — Sie können sich auf Ihr Geschäft konzentrieren.</p>
     </div>
     <div class="grid">
-      <div class="card reveal" data-spot data-cur>
+      <div class="card reveal" data-spot>
         <span class="num">01</span>
-        <h3>Markenstrategie</h3>
-        <p>Positionierung, Identität und Botschaft, die im Kopf bleiben. Wir schärfen, wofür Ihre Marke steht — und warum es zählt.</p>
+        <h3>Webdesign</h3>
+        <p>Individuelle Designs, die zu Ihrer Marke passen — kein Baukasten, kein Template. Jede Seite wird von Grund auf für Sie gestaltet.</p>
       </div>
-      <div class="card reveal" data-spot data-cur>
+      <div class="card reveal" data-spot>
         <span class="num">02</span>
-        <h3>Performance Marketing</h3>
-        <p>Kampagnen über Google, Meta und LinkedIn, die auf Umsatz optimiert sind — nicht auf Eitelkeitsmetriken.</p>
+        <h3>Entwicklung & Launch</h3>
+        <p>Schnell, sicher und mobil-optimiert. Wir bauen und veröffentlichen Ihre Seite — inklusive Hosting-Empfehlung und Domain-Setup.</p>
       </div>
-      <div class="card reveal" data-spot data-cur>
+      <div class="card reveal" data-spot>
         <span class="num">03</span>
-        <h3>Content & Design</h3>
-        <p>Visuelle Kommunikation und Inhalte auf höchstem Niveau, die Vertrauen schaffen und Conversions auslösen.</p>
+        <h3>SEO-Grundlagen</h3>
+        <p>Damit Google Ihre Seite findet: saubere Struktur, schnelle Ladezeiten und die richtigen Meta-Daten — von Anfang an richtig eingebaut.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRINCIPLES -->
-<section class="stats" id="ansatz">
+<!-- ANSATZ -->
+<section class="dark-band">
   <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:48px">
+    <div class="sec-head reveal">
       <span class="eyebrow">Unser Ansatz</span>
-      <h2>Prinzipien statt Versprechen.</h2>
-      <p>Wir nennen keine Zahlen, die wir nicht für Ihr Projekt belegen können. Stattdessen das, wofür wir stehen.</p>
+      <h2>Klar. Ehrlich. Ohne Agentur-Theater.</h2>
+      <p>Wir machen keine leeren Versprechen. Was wir Ihnen sagen, können wir liefern.</p>
     </div>
     <div class="grid">
-      <div class="card reveal" data-spot data-cur>
+      <div class="card reveal" data-spot>
         <span class="num">—</span>
         <h3>Erst zuhören</h3>
-        <p>Bevor wir etwas vorschlagen, verstehen wir Ihr Geschäft, Ihren Markt und Ihre Ziele.</p>
+        <p>Jedes Projekt startet mit einem Gespräch. Wir verstehen Ihr Geschäft, bevor wir das erste Pixel setzen.</p>
       </div>
-      <div class="card reveal" data-spot data-cur>
+      <div class="card reveal" data-spot>
         <span class="num">—</span>
-        <h3>Messbar arbeiten</h3>
-        <p>Jede Maßnahme bekommt ein Ziel und eine Kennzahl. Sie sehen, was wirkt — und was nicht.</p>
+        <h3>Fixe Preise</h3>
+        <p>Kein Stundensatz-Roulette. Sie wissen vor Projektstart, was Ihre Seite kostet — und dabei bleibt es.</p>
       </div>
-      <div class="card reveal" data-spot data-cur>
+      <div class="card reveal" data-spot>
         <span class="num">—</span>
-        <h3>Ehrlich kommunizieren</h3>
-        <p>Klare Worte, realistische Erwartungen, keine geschönten Reports. Auch wenn etwas nicht läuft.</p>
+        <h3>Kurze Wege</h3>
+        <p>Sie sprechen direkt mit uns — kein Ticketsystem, kein Account-Manager dazwischen. Antwort innerhalb von 24 Stunden.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
+<!-- PROZESS -->
 <section id="prozess">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Unser Prozess</span>
-      <h2>Klarheit in drei Schritten.</h2>
-      <p>Transparent, partnerschaftlich, ohne Agentur-Theater. Sie wissen jederzeit, woran wir arbeiten und warum.</p>
+      <h2>Von der Idee zur fertigen Seite.</h2>
+      <p>Strukturiert und transparent — Sie wissen jederzeit, wo wir stehen.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
-        <div class="s-num"></div>
-        <span class="s-idx">Phase 01</span>
-        <h3>Analyse & Strategie</h3>
-        <p>Wir tauchen tief in Ihr Geschäft ein: Markt, Wettbewerb, Zielgruppe. Daraus entsteht ein klarer Fahrplan.</p>
+        <div class="s-line"></div>
+        <span class="s-idx">Schritt 01</span>
+        <h3>Gespräch & Briefing</h3>
+        <p>Wir klären kostenlos: Was soll die Seite leisten, wer ist Ihre Zielgruppe, welcher Stil passt zu Ihnen.</p>
       </div>
       <div class="step reveal">
-        <div class="s-num"></div>
-        <span class="s-idx">Phase 02</span>
-        <h3>Umsetzung & Kreation</h3>
-        <p>Marke, Kampagnen und Inhalte werden produziert — abgestimmt, hochwertig und auf Ihre Ziele ausgerichtet.</p>
+        <div class="s-line"></div>
+        <span class="s-idx">Schritt 02</span>
+        <h3>Design & Feedback</h3>
+        <p>Sie erhalten ein erstes Design-Konzept. Wir passen es gemeinsam an, bis es passt — inklusive Revisionsrunden.</p>
       </div>
       <div class="step reveal">
-        <div class="s-num"></div>
-        <span class="s-idx">Phase 03</span>
-        <h3>Skalierung & Optimierung</h3>
-        <p>Was funktioniert, wird verstärkt. Kontinuierliches Testing und Reporting halten die Kurve nach oben.</p>
+        <div class="s-line"></div>
+        <span class="s-idx">Schritt 03</span>
+        <h3>Entwicklung & Launch</h3>
+        <p>Wir bauen, testen und veröffentlichen Ihre Seite. Nach dem Launch sind wir noch da — für Updates und Fragen.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PREISE -->
+<section id="preise" class="dark-band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Preise</span>
+      <h2>Transparente Pakete. Kein Kleingedrucktes.</h2>
+      <p>Alle Preise auf Anfrage — weil jedes Projekt anders ist. Aber der Rahmen ist klar.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal" data-spot>
+        <span class="num">Starter</span>
+        <h3>Landingpage</h3>
+        <p>Eine starke Seite mit klarem Fokus. Ideal für Selbstständige und kleine Unternehmen, die einen professionellen Auftritt brauchen.</p>
+      </div>
+      <div class="card reveal" data-spot style="border-color:rgba(201,168,106,0.35)">
+        <span class="num" style="color:var(--gold-2)">Beliebt</span>
+        <h3>Business-Webseite</h3>
+        <p>Mehrere Unterseiten, Kontaktformular, SEO-Grundlagen. Für Unternehmen, die online sichtbar wachsen wollen.</p>
+      </div>
+      <div class="card reveal" data-spot>
+        <span class="num">Premium</span>
+        <h3>Individuallösung</h3>
+        <p>Komplexe Anforderungen, besondere Funktionen, besonderes Design. Wir setzen um, was andere ablehnen.</p>
+      </div>
+    </div>
+    <p class="reveal" style="margin-top:36px;color:var(--paper-dim);font-size:0.96rem">
+      Alle konkreten Preise klären wir im kostenlosen Erstgespräch — abhängig von Umfang und Anforderungen.
+    </p>
   </div>
 </section>
 
 <!-- PHILOSOPHY -->
 <section>
   <div class="wrap quote reveal">
-    <blockquote>Gutes Marketing beginnt nicht mit einer Kampagne, sondern mit einer <em>ehrlichen Frage</em>: Was macht dieses Unternehmen wirklich wertvoll?</blockquote>
+    <blockquote>Eine gute Webseite ist kein Kostenpunkt — sie ist der <em>beste Verkäufer</em>, den Sie je einstellen werden.</blockquote>
     <div class="author">Unsere Überzeugung</div>
     <div class="role">Das Noble Team</div>
   </div>
@@ -355,11 +373,11 @@
 <section id="kontakt">
   <div class="wrap">
     <div class="cta-band reveal">
-      <h2>Bereit, ernst gemacht zu werden?</h2>
-      <p>Buchen Sie ein unverbindliches Erstgespräch. Wir hören zu, bevor wir verkaufen.</p>
-      <div class="hero-cta">
-        <a href="mailto:NobleMarketing07@gmail.com" class="btn btn-gold" data-cur><span>Gespräch buchen →</span></a>
-        <a href="#leistungen" class="btn btn-ghost" data-cur><span>Mehr erfahren</span></a>
+      <h2>Ihre neue Webseite wartet.</h2>
+      <p>Buchen Sie jetzt ein kostenloses Erstgespräch. Kein Verkaufsdruck, keine versteckten Kosten — wir hören einfach zu.</p>
+      <div class="btns">
+        <a href="mailto:NobleMarketing07@gmail.com" class="btn btn-gold"><span>Jetzt Gespräch buchen →</span></a>
+        <a href="#leistungen" class="btn btn-ghost"><span>Leistungen ansehen</span></a>
       </div>
     </div>
   </div>
@@ -371,19 +389,18 @@
     <div class="foot-top">
       <div class="foot-brand">
         <a href="#" class="logo"><span class="dot"></span>Noble</a>
-        <p>Strategische Markenführung und digitales Wachstum für Unternehmen mit Anspruch.</p>
+        <p>Professionelle Webseiten für Unternehmen, die online wachsen wollen.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
           <h4>Agentur</h4>
           <a href="#leistungen">Leistungen</a>
-          <a href="#ansatz">Ansatz</a>
           <a href="#prozess">Prozess</a>
+          <a href="#preise">Preise</a>
         </div>
         <div class="foot-col">
           <h4>Kontakt</h4>
           <a href="mailto:NobleMarketing07@gmail.com">NobleMarketing07@gmail.com</a>
-          <a href="#">LinkedIn</a>
           <a href="#">Instagram</a>
         </div>
       </div>
@@ -420,45 +437,14 @@
 
   // Scroll reveal
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  }, {threshold:0.16});
-  document.querySelectorAll('.reveal, .step').forEach((el,i) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal, .step').forEach((el, i) => {
     el.style.transitionDelay = (i % 3 * 0.09) + 's';
     io.observe(el);
   });
 
-  // Custom cursor (lerp follow)
-  const cur = document.getElementById('cur'), dot = document.getElementById('curDot');
-  let mx=innerWidth/2, my=innerHeight/2, cx=mx, cy=my;
-  if (matchMedia('(hover:hover)').matches && innerWidth>880){
-    addEventListener('mousemove', e => {
-      mx=e.clientX; my=e.clientY;
-      dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`;
-    });
-    (function loop(){
-      cx += (mx-cx)*0.18; cy += (my-cy)*0.18;
-      cur.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`;
-      requestAnimationFrame(loop);
-    })();
-    document.querySelectorAll('[data-cur]').forEach(el => {
-      el.addEventListener('mouseenter', () => cur.classList.add('grow'));
-      el.addEventListener('mouseleave', () => cur.classList.remove('grow'));
-    });
-  }
-
-  // Magnetic buttons
-  if (matchMedia('(hover:hover)').matches){
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('mousemove', e => {
-        const r = btn.getBoundingClientRect();
-        const x = e.clientX - r.left - r.width/2, y = e.clientY - r.top - r.height/2;
-        btn.style.transform = `translate(${x*0.25}px,${y*0.35}px) translateY(-3px)`;
-      });
-      btn.addEventListener('mouseleave', () => btn.style.transform = '');
-    });
-  }
-
-  // Card spotlight follow
+  // Card spotlight
   document.querySelectorAll('[data-spot]').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
@@ -467,13 +453,26 @@
     });
   });
 
-  // Subtle mesh parallax on mouse
+  // Magnetic buttons
+  if (matchMedia('(hover:hover)').matches) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.22}px,${y * 0.32}px) translateY(-3px)`;
+      });
+      btn.addEventListener('mouseleave', () => btn.style.transform = '');
+    });
+  }
+
+  // Mesh parallax
   const m1 = document.querySelector('.m1'), m2 = document.querySelector('.m2');
-  addEventListener('mousemove', e => {
-    const dx = (e.clientX/innerWidth - 0.5), dy = (e.clientY/innerHeight - 0.5);
-    if(m1) m1.style.translate = `${dx*30}px ${dy*30}px`;
-    if(m2) m2.style.translate = `${dx*-40}px ${dy*-20}px`;
-  }, {passive:true});
+  window.addEventListener('mousemove', e => {
+    const dx = e.clientX / innerWidth - 0.5, dy = e.clientY / innerHeight - 0.5;
+    if (m1) m1.style.translate = `${dx * 28}px ${dy * 28}px`;
+    if (m2) m2.style.translate = `${dx * -36}px ${dy * -18}px`;
+  }, {passive: true});
 </script>
 </body>
 </html>
